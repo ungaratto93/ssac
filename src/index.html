@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div>
+      <div id="modal">
+        <h2>Simulação de financiamento</h2>
+        <div id="input-info">
+          <div class="input-group">
+            <div class="inp">
+              <label>
+                Valor
+                <input
+                  id="amount"
+                  type="number"
+                  value="200000"
+                  step="0.01"
+                  required="true"
+                />
+              </label>
+            </div>
+            <div class="inp">
+              <label>
+                Prazo (anos)
+                <input
+                  id="deadline"
+                  type="number"
+                  value="20"
+                  step="1"
+                  required="true"
+                />
+              </label>
+            </div>
+            <div class="inp">
+              <label
+                >Juros (ao ano)
+                <input
+                  id="fees"
+                  type="number"
+                  step=".01"
+                  value="0.08"
+                  required
+                />
+              </label>
+            </div>
+          </div>
+
+          <input type="button" id="simulateButton" value="Simular" onclick="toSimulate();" />
+        </div>
+        <div id="report" hidden="true">
+          <h4>Resultado</h4>
+          <div id="input-info">
+            <div class="input-group">
+                <div class="inp">
+                  <label>
+                    Prazo (meses)
+                    <input
+                      id="monthlyDeadline"
+                      type="number"
+                      value=""
+                      step="1"
+                      readonly
+                      />
+                  </label>
+                </div>
+                <div class="inp">
+                  <label
+                    >Juros (ao mes)
+                    <input
+                      id="montlyFees"
+                      type="number"
+                      step=".01"
+                      value=""
+                      readonly
+                    />
+                  </label>
+                </div>
+                <div class="inp">
+                  <label>
+                    Juros acumulados
+                    <input
+                      id="aggFees"
+                      type="number"
+                      value=""
+                      readonly
+                    />
+                  </label>
+                </div>
+            </div>
+          <table>
+            <thead>
+              <th>Prestacao</th>
+              <th>Amortizacao</th>
+              <th>Juros</th>
+              <th>Total</th>
+            </thead>
+            <tbody id="dataTable">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  
+  </body>
+</html>

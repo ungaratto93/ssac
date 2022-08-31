@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(107, 144, 212);
+}
+
+#modal {
+  align-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+
+  position: fixed;
+  width: 400px;
+  height: 500px;
+  background-color: rgb(233, 240, 240);
+}
+
+.input-group {
+  display: inline-flex;
+}
+
+input,
+label {
+  width: 125px;
+  display: block;
+}
+
+.inp {
+  padding: 2px;
+  margin: 2px;
+}
